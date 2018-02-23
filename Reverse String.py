@@ -5,11 +5,14 @@ class unitest(unittest.TestCase):
         Input = ""
         Output = ""
         self.assertEqual(Solution().reverseString(Input),Output)
+    def testSampleString(self):
+        Input = "hello"
+        Output = "olleh"
+        self.assertEqual(Solution().reverseString(Input),Output)
 
 class Solution():
     def reverseString(self, s):
-        if s == "":
-            return ""
+        return s[::-1]
 
 if __name__ == '__main__':
     unittest.main()
